@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>index</title>
+    <style>
+      /* tab button */
+      .tab {
+        background-color: #555;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 25%;
+      }
+
+      /* change background color when mouse over */
+      .tab:hover {
+        background-color: #777;
+      }
+
+      /* default content */
+      .content {
+        color: white;
+        display: none;
+        padding: 50px;
+        text-align: center;
+      }
+
+      /* Style each tab content individually */
+      #top {
+
+      }
+
+      #about {
+        background-color: tomato;
+      }
+      #product {
+        background-color: darkolivegreen;
+      }
+      #tech {
+        background-color: dodgerblue;
+      }
+      #download {
+        background-color: orange;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- content class 는 top 화면을 구성한다.  -->
+    <div id="top" class="content"></div>
+
+    <div id="about" class="content">
+      <h1>About</h1>
+      <p>Custom Software Development Company</p>
+    </div>
+
+    <div id="product" class="content">
+      <h1>Products</h1>
+      <p>
+        Building tailored software to address critical needs of global
+        enterprises.
+      </p>
+    </div>
+
+    <div id="tech" class="content">
+      <h1>Technology</h1>
+      <p>Machine Learning, Artificial Intelligent, Cloud Platform.</p>
+    </div>
+
+    <div id="download" class="content">
+      <h1>Downloads</h1>
+      <p>You can download a free 10 days trial.</p>
+    </div>
+
+    <!-- navigation 막대 구성, css 변경 -->
+    <button id="default" class="tab">About</button>
+    <button class="tab">Products</button>
+    <button class="tab">Technology</button>
+    <button class="tab">Downloads</button>
+
+    <script>
+
+
+    </script>
+  </body>
+</html>
