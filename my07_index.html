@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>index</title>
     <style>
+
+      .container {
+        background-color:#777;
+        display: block;
+        height: 150;
+      }
       /* tab button */
       .tab {
         background-color: #555;
@@ -19,12 +25,17 @@
         width: 25%;
       }
 
+
+
       /* change background color when mouse over */
       .tab:hover {
         background-color: #777;
       }
 
       /* default content */
+
+
+
       .content {
         color: white;
         display: none;
@@ -33,13 +44,10 @@
         height: 150px;
       }
 
-      #about .content {
+/* 
+      #about {
         display: block;
-      }
-
-      .tab:hover, .content {
-        display: block;
-      }
+      } */
 
       /* Style each tab content individually */
 
@@ -64,6 +72,7 @@
 
   <body>
 
+    <div class="container">
 
     <div id="about" class="content">
       <h1>About</h1>
@@ -88,13 +97,52 @@
       <p>You can download a free 10 days trial.</p>
     </div>
 
+    </div>
+
     <!-- navigation 막대 구성, css 변경 -->
-    <button id="default" class="tab">About</button>
-    <button class="tab">Products</button>
-    <button class="tab">Technology</button>
-    <button class="tab">Downloads</button>
+    <button id="default" class="tab" 
+    onmouseover="
+    document.querySelector('#about').style.display = 'block';"
+    onmouseout = " 
+    document.querySelector('#about').style.display = 'block';
+    
+    ">About</button>
+
+    <button class="tab" 
+    onmouseover = " 
+    document.querySelector('#about').style.display = 'none';
+    document.querySelector('#product').style.display = 'block';"
+
+    onmouseout = "
+    document.querySelector('#product').style.display = 'none';
+    document.querySelector('#about').style.display = 'block';" "
+    >Products</button>
+
+    <button class="tab" 
+    onmouseover = "
+    
+    document.querySelector('#about').style.display = 'none';
+    document.querySelector('#tech').style.display = 'block';"
+
+    onmouseout = "
+    document.querySelector('#tech').style.display = 'none';
+    document.querySelector('#about').style.display = 'block';" "
+    >Technology</button>
+
+    <button class="tab" 
+    onmouseover = "
+    document.querySelector('#about').style.display = 'none';
+    document.querySelector('#download').style.display = 'block';"
+
+    onmouseout = "
+    document.querySelector('#download').style.display = 'none';
+    document.querySelector('#about').style.display = 'block';" "
+    >Downloads</button>
 
     <script>
+
+      
+
       // document.addEventListener( 'DOMContentLoaded', () => {
       //   //dom array header, menu
       //   const dar_header = document.querySelectorAll('.content')
