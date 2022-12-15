@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>index</title>
+    <style>
+
+      /* tab button */
+      .tab {
+        background-color: #555;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 25%;
+      }
+
+
+
+      /* change background color when mouse over */
+
+
+      /* default content */
+
+
+
+      .content {
+        color: white;
+        display: none;
+        padding: 50px;
+        text-align: center;
+        height: 150px;
+      }
+
+
+      #about {
+        display: block;
+      }
+
+      /* Style each tab content individually */
+
+
+      #about {
+        background-color: tomato;
+      }
+      #product {
+        background-color: darkolivegreen;
+      }
+      #tech {
+        background-color: dodgerblue;
+      }
+      #download {
+        background-color: orange;
+      }
+
+      #btn_about:hover {background-color: tomato;}
+      #btn_product:hover {background-color: darkolivegreen;}
+      #btn_tech:hover {background-color: dodgerblue;}
+      #btn_download:hover {background-color: orange;}
+
+
+    </style>
+  </head>
+
+  <body>
+
+
+    <div id="about" class="content">
+      <h1>About</h1>
+      <p>Custom Software Development Company</p>
+    </div>
+
+    <div id="product" class="content">
+      <h1>Products</h1>
+      <p>
+        Building tailored software to address critical needs of global
+        enterprises.
+      </p>
+    </div>
+
+    <div id="tech" class="content">
+      <h1>Technology</h1>
+      <p>Machine Learning, Artificial Intelligent, Cloud Platform.</p>
+    </div>
+
+    <div id="download" class="content">
+      <h1>Downloads</h1>
+      <p>You can download a free 10 days trial.</p>
+    </div>
+
+
+
+    <!-- navigation 막대 구성, css 변경 -->
+    <button id="btn_about" class="tab" 
+    onmouseover="
+    document.querySelector('#about').style.display = 'block';
+    document.querySelector('#btn_about').style.background = 'tomato';"
+    onmouseout = " 
+    document.querySelector('#about').style.display = 'block';
+    document.querySelector('#btn_about').style.backgroundColor = '#555';"
+    ">About</button>
+
+    <button id="btn_product" class="tab" 
+    onmouseover = " 
+    document.querySelector('#about').style.display = 'none';
+    document.querySelector('#product').style.display = 'block';
+    document.querySelector('#btn_about').style.backgroundColor = '#555';"
+    
+
+    onmouseout = "
+    document.querySelector('#product').style.display = 'none';
+    document.querySelector('#about').style.display = 'block';
+    document.querySelector('#btn_about').style.backgroundColor = 'tomato';""
+    >Products</button>
+
+    <button id="btn_tech" class="tab" 
+    onmouseover = "
+    document.querySelector('#about').style.display = 'none';
+    document.querySelector('#tech').style.display = 'block';
+    document.querySelector('#btn_about').style.backgroundColor = '#555';"
+
+    onmouseout = "
+    document.querySelector('#tech').style.display = 'none';
+    document.querySelector('#about').style.display = 'block';
+    document.querySelector('#btn_about').style.backgroundColor = 'tomato';" "
+    >Technology</button>
+
+    <button id="btn_download" class="tab" 
+    onmouseover = "
+    document.querySelector('#about').style.display = 'none';
+    document.querySelector('#download').style.display = 'block';
+    document.querySelector('#btn_about').style.backgroundColor = '#555';"
+
+    onmouseout = "
+    document.querySelector('#download').style.display = 'none';
+    document.querySelector('#about').style.display = 'block';
+    document.querySelector('#btn_about').style.backgroundColor = 'tomato';" "
+    >Downloads</button>
+
+    <script>
+
+    </script>
+
+    
+  </body>
+</html>
