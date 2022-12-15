@@ -7,11 +7,6 @@
     <title>index</title>
     <style>
 
-      .container {
-        background-color:#777;
-        display: block;
-        height: 150;
-      }
       /* tab button */
       .tab {
         background-color: #555;
@@ -28,9 +23,7 @@
 
 
       /* change background color when mouse over */
-      .tab:hover {
-        background-color: #777;
-      }
+
 
       /* default content */
 
@@ -44,10 +37,10 @@
         height: 150px;
       }
 
-/* 
+
       #about {
         display: block;
-      } */
+      }
 
       /* Style each tab content individually */
 
@@ -65,6 +58,10 @@
         background-color: orange;
       }
 
+      #btn_about:hover {background-color: tomato;}
+      #btn_product:hover {background-color: darkolivegreen;}
+      #btn_tech:hover {background-color: dodgerblue;}
+      #btn_download:hover {background-color: orange;}
 
 
     </style>
@@ -72,7 +69,6 @@
 
   <body>
 
-    <div class="container">
 
     <div id="about" class="content">
       <h1>About</h1>
@@ -97,46 +93,53 @@
       <p>You can download a free 10 days trial.</p>
     </div>
 
-    </div>
+
 
     <!-- navigation 막대 구성, css 변경 -->
-    <button id="default" class="tab" 
+    <button id="btn_about" class="tab" 
     onmouseover="
-    document.querySelector('#about').style.display = 'block';"
+    document.querySelector('#about').style.display = 'block';
+    document.querySelector('#btn_about').style.background = 'tomato';"
     onmouseout = " 
     document.querySelector('#about').style.display = 'block';
-    
+    document.querySelector('#btn_about').style.backgroundColor = '#555';"
     ">About</button>
 
-    <button class="tab" 
+    <button id="btn_product" class="tab" 
     onmouseover = " 
     document.querySelector('#about').style.display = 'none';
-    document.querySelector('#product').style.display = 'block';"
+    document.querySelector('#product').style.display = 'block';
+    document.querySelector('#btn_about').style.backgroundColor = '#555';"
+    
 
     onmouseout = "
     document.querySelector('#product').style.display = 'none';
-    document.querySelector('#about').style.display = 'block';" "
+    document.querySelector('#about').style.display = 'block';
+    document.querySelector('#btn_about').style.backgroundColor = 'tomato';""
     >Products</button>
 
-    <button class="tab" 
+    <button id="btn_tech" class="tab" 
     onmouseover = "
-    
     document.querySelector('#about').style.display = 'none';
-    document.querySelector('#tech').style.display = 'block';"
+    document.querySelector('#tech').style.display = 'block';
+    document.querySelector('#btn_about').style.backgroundColor = '#555';"
 
     onmouseout = "
     document.querySelector('#tech').style.display = 'none';
-    document.querySelector('#about').style.display = 'block';" "
+    document.querySelector('#about').style.display = 'block';
+    document.querySelector('#btn_about').style.backgroundColor = 'tomato';" "
     >Technology</button>
 
-    <button class="tab" 
+    <button id="btn_download" class="tab" 
     onmouseover = "
     document.querySelector('#about').style.display = 'none';
-    document.querySelector('#download').style.display = 'block';"
+    document.querySelector('#download').style.display = 'block';
+    document.querySelector('#btn_about').style.backgroundColor = '#555';"
 
     onmouseout = "
     document.querySelector('#download').style.display = 'none';
-    document.querySelector('#about').style.display = 'block';" "
+    document.querySelector('#about').style.display = 'block';
+    document.querySelector('#btn_about').style.backgroundColor = 'tomato';" "
     >Downloads</button>
 
     <script>
