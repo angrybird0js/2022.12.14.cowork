@@ -30,14 +30,19 @@
         display: none;
         padding: 50px;
         text-align: center;
+        height: 150px;
+      }
+
+      #about .content {
+        display: block;
+      }
+
+      .tab:hover, .content {
+        display: block;
       }
 
       /* Style each tab content individually */
-      #top {
-        width: 100%;
-        border: none;
-        outline: none;
-      }
+
 
       #about {
         background-color: tomato;
@@ -51,13 +56,14 @@
       #download {
         background-color: orange;
       }
+
+
+
     </style>
   </head>
 
   <body>
 
-    <!-- content class 는 top 화면을 구성한다.  -->
-    <div id="top" class="top_container"></div>
 
     <div id="about" class="content">
       <h1>About</h1>
@@ -89,38 +95,38 @@
     <button class="tab">Downloads</button>
 
     <script>
-      document.addEventListener( 'DOMContentLoaded', () => {
-        //dom array header, menu
-        const dar_header = document.querySelectorAll('.content')
-        const dar_menu = document.querySelectorAll('.tab')
+      // document.addEventListener( 'DOMContentLoaded', () => {
+      //   //dom array header, menu
+      //   const dar_header = document.querySelectorAll('.content')
+      //   const dar_menu = document.querySelectorAll('.tab')
 
-        // console.log(dar_header)
-        // console.log(dar_menu)
-        // console.log(dar_menu.length)
+      //   // console.log(dar_header)
+      //   // console.log(dar_menu)
+      //   // console.log(dar_menu.length)
 
-        dar_menu.forEach( (menu_item, idx) => {
-          menu_item.addEventListener( 'click', () => { 
+      //   dar_menu.forEach( (menu_item, idx) => {
+      //     menu_item.addEventListener( 'click', () => { 
             
-          console.log(menu_item , index) // 클릭한 항목에 따라 idx 값 변경됨 
-          // header
-          // 개별 contents 항목별로 forEach 먼저 흐름제어 할지 여부 결정
-          disp_top(index)
+      //     console.log(menu_item , index) // 클릭한 항목에 따라 idx 값 변경됨 
+      //     // header
+      //     // 개별 contents 항목별로 forEach 먼저 흐름제어 할지 여부 결정
+      //     disp_top(index)
 
-         }) // click
-        }) // foreach
+      //    }) // click
+      //   }) // foreach
         
-        function disp_top(idx) {
-          // 매개변수에 맞게 content 표시
-          // dar_header.forEach( (disp_content) => {} )
+      //   function disp_top(idx) {
+      //     // 매개변수에 맞게 content 표시
+      //     // dar_header.forEach( (disp_content) => {} )
 
-        }
-
-
-        // dom 에서 style attribute 추가
+      //   }
 
 
+      //   // dom 에서 style attribute 추가
 
-      })
+
+
+      // })
 
     </script>
   </body>
